@@ -1,0 +1,32 @@
+[
+  {
+    "name": "nav_pages-Apps",
+    "path": "/nav_pages/Apps",
+    "component": "E:\\\\WorkSpace\\\\nuxt\\\\mooclod_work\\\\pages\\\\nav_pages\\\\Apps.vue",
+    "chunkName": "pages/nav_pages/Apps"
+  },
+  {
+    "name": "nav_pages-Cloud_Managed",
+    "path": "/nav_pages/Cloud_Managed",
+    "component": "E:\\\\WorkSpace\\\\nuxt\\\\mooclod_work\\\\pages\\\\nav_pages\\\\Cloud_Managed.vue",
+    "chunkName": "pages/nav_pages/Cloud_Managed"
+  },
+  {
+    "name": "nav_pages-Managed_Hosting",
+    "path": "/nav_pages/Managed_Hosting",
+    "component": "E:\\\\WorkSpace\\\\nuxt\\\\mooclod_work\\\\pages\\\\nav_pages\\\\Managed_Hosting.vue",
+    "chunkName": "pages/nav_pages/Managed_Hosting"
+  },
+  {
+    "name": "nav_pages-Who_we_are",
+    "path": "/nav_pages/Who_we_are",
+    "component": "E:\\\\WorkSpace\\\\nuxt\\\\mooclod_work\\\\pages\\\\nav_pages\\\\Who_we_are.vue",
+    "chunkName": "pages/nav_pages/Who_we_are"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "E:\\\\WorkSpace\\\\nuxt\\\\mooclod_work\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  }
+]

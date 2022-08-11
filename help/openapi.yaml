@@ -1,0 +1,567 @@
+openapi: 3.0.1
+info:
+  title: MooCloud API v3
+  version: 9.0.1
+servers:
+  - url: https://obj.tools.moocloud.ch
+    description: Demo
+tags:
+  
+  - name: ItemsProducts
+    x-collection: Products
+
+  - name: ItemsPrices
+    x-collection: prices
+
+paths:
+  /items/Products:
+    post:
+      summary: Create an Item
+      description: Create a new Products item.
+      tags:
+        - Items
+        - ItemsProducts
+      operationId: createItemsProducts
+      parameters:
+        - $ref: '#/components/parameters/Meta'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              oneOf:
+                - type: array
+                  items:
+                    $ref: '#/components/schemas/ItemsProducts'
+                - $ref: '#/components/schemas/ItemsProducts'
+      responses:
+        '200':
+          description: Successful request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    items:
+                      $ref: '#/components/schemas/ItemsProducts'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+    get:
+      summary: List Items
+      description: List the Products items.
+      tags:
+        - Items
+        - ItemsProducts
+      operationId: readItemsProducts
+      security:
+        - Auth: []
+      parameters:
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Meta'
+        - $ref: '#/components/parameters/Offset'
+        - $ref: '#/components/parameters/Sort'
+        - $ref: '#/components/parameters/Filter'
+        - $ref: '#/components/parameters/Search'
+      responses:
+        '200':
+          description: Successful request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      $ref: '#/components/schemas/ItemsProducts'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+  /items/Products/{id}:
+    get:
+      summary: Retrieve an Item
+      description: Retrieve a single Products item by unique identifier.
+      tags:
+        - Items
+        - ItemsProducts
+      operationId: readSingleItemsProducts
+      parameters:
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Meta'
+        - name: id
+          description: Index of the item.
+          in: path
+          required: true
+          schema:
+            oneOf:
+              - type: integer
+                description: Incremental index of the item.
+                example: 1
+              - type: string
+                description: Unique identifier of the item.
+                example: 8cbb43fe-4cdf-4991-8352-c461779cec02
+      responses:
+        '200':
+          description: Successful request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    items:
+                      $ref: '#/components/schemas/ItemsProducts'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        '404':
+          $ref: '#/components/responses/NotFoundError'
+    patch:
+      summary: Update an Item
+      description: Update an existing Products item.
+      tags:
+        - Items
+        - ItemsProducts
+      operationId: updateSingleItemsProducts
+      parameters:
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Meta'
+        - name: id
+          description: Index of the item.
+          in: path
+          required: true
+          schema:
+            oneOf:
+              - type: integer
+                description: Incremental index of the item.
+                example: 1
+              - type: string
+                description: Unique identifier of the item.
+                example: 8cbb43fe-4cdf-4991-8352-c461779cec02
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/ItemsProducts'
+      responses:
+        '200':
+          description: Successful request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    items:
+                      $ref: '#/components/schemas/ItemsProducts'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        '404':
+          $ref: '#/components/responses/NotFoundError'
+    delete:
+      summary: Delete an Item
+      description: Delete an existing Products item.
+      tags:
+        - Items
+        - ItemsProducts
+      operationId: deleteSingleItemsProducts
+      responses:
+        '200':
+          description: Successful request
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        '404':
+          $ref: '#/components/responses/NotFoundError'
+      parameters:
+        - name: id
+          description: Index of the item.
+          in: path
+          required: true
+          schema:
+            oneOf:
+              - type: integer
+                description: Incremental index of the item.
+                example: 1
+              - type: string
+                description: Unique identifier of the item.
+                example: 8cbb43fe-4cdf-4991-8352-c461779cec02
+  /items/prices:
+    post:
+      summary: Create an Item
+      description: Create a new prices item.
+      tags:
+        - Items
+        - ItemsPrices
+      operationId: createItemsPrices
+      parameters:
+        - $ref: '#/components/parameters/Meta'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              oneOf:
+                - type: array
+                  items:
+                    $ref: '#/components/schemas/ItemsPrices'
+                - $ref: '#/components/schemas/ItemsPrices'
+      responses:
+        '200':
+          description: Successful request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    items:
+                      $ref: '#/components/schemas/ItemsPrices'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+    get:
+      summary: List Items
+      description: List the prices items.
+      tags:
+        - Items
+        - ItemsPrices
+      operationId: readItemsPrices
+      security:
+        - Auth: []
+      parameters:
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Meta'
+        - $ref: '#/components/parameters/Offset'
+        - $ref: '#/components/parameters/Sort'
+        - $ref: '#/components/parameters/Filter'
+        - $ref: '#/components/parameters/Search'
+      responses:
+        '200':
+          description: Successful request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      $ref: '#/components/schemas/ItemsPrices'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+  /items/prices/{id}:
+    get:
+      summary: Retrieve an Item
+      description: Retrieve a single prices item by unique identifier.
+      tags:
+        - Items
+        - ItemsPrices
+      operationId: readSingleItemsPrices
+      parameters:
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Meta'
+        - name: id
+          description: Index of the item.
+          in: path
+          required: true
+          schema:
+            oneOf:
+              - type: integer
+                description: Incremental index of the item.
+                example: 1
+              - type: string
+                description: Unique identifier of the item.
+                example: 8cbb43fe-4cdf-4991-8352-c461779cec02
+      responses:
+        '200':
+          description: Successful request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    items:
+                      $ref: '#/components/schemas/ItemsPrices'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        '404':
+          $ref: '#/components/responses/NotFoundError'
+    patch:
+      summary: Update an Item
+      description: Update an existing prices item.
+      tags:
+        - Items
+        - ItemsPrices
+      operationId: updateSingleItemsPrices
+      parameters:
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Meta'
+        - name: id
+          description: Index of the item.
+          in: path
+          required: true
+          schema:
+            oneOf:
+              - type: integer
+                description: Incremental index of the item.
+                example: 1
+              - type: string
+                description: Unique identifier of the item.
+                example: 8cbb43fe-4cdf-4991-8352-c461779cec02
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/ItemsPrices'
+      responses:
+        '200':
+          description: Successful request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    items:
+                      $ref: '#/components/schemas/ItemsPrices'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        '404':
+          $ref: '#/components/responses/NotFoundError'
+    delete:
+      summary: Delete an Item
+      description: Delete an existing prices item.
+      tags:
+        - Items
+        - ItemsPrices
+      operationId: deleteSingleItemsPrices
+      responses:
+        '200':
+          description: Successful request
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        '404':
+          $ref: '#/components/responses/NotFoundError'
+      parameters:
+        - name: id
+          description: Index of the item.
+          in: path
+          required: true
+          schema:
+            oneOf:
+              - type: integer
+                description: Incremental index of the item.
+                example: 1
+              - type: string
+                description: Unique identifier of the item.
+                example: 8cbb43fe-4cdf-4991-8352-c461779cec02
+
+components:
+  schemas:
+    ItemsProducts:
+      type: object
+      properties:
+        id:
+          nullable: false
+          type: string
+        status:
+          nullable: false
+          type: string
+        date_updated:
+          nullable: true
+          type: string
+          format: timestamp
+        name:
+          nullable: true
+          type: string
+        title:
+          nullable: true
+          type: string
+        description:
+          nullable: true
+          type: string
+        popular:
+          nullable: true
+          type: boolean
+        progress_info:
+          nullable: true
+          type: array
+          items:
+            type: string
+        family:
+          nullable: true
+          type: string
+      x-collection: Products
+    ItemsPrices:
+      type: object
+      properties:
+        id:
+          nullable: false
+          type: string
+        product:
+          nullable: true
+          oneOf:
+            - type: string
+            - $ref: '#/components/schemas/ItemsProducts'
+        active:
+          nullable: true
+          type: boolean
+        currency:
+          nullable: true
+          type: string
+        unit_amount:
+          nullable: true
+          type: integer
+        link:
+          nullable: true
+          type: string
+      x-collection: prices
+
+  parameters:
+    Id:
+      description: Index
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+    UUId:
+      description: Unique identifier for the object.
+      name: id
+      in: path
+      required: true
+      schema:
+        example: 8cbb43fe-4cdf-4991-8352-c461779cec02
+        type: string
+    Collection:
+      description: Collection of which you want to retrieve the items from.
+      name: collection
+      in: path
+      required: true
+      schema:
+        type: string
+    Search:
+      description: Filter by items that contain the given search query in one of their fields.
+      in: query
+      name: search
+      required: false
+      schema:
+        type: string
+    Page:
+      description: Cursor for use in pagination. Often used in combination with limit.
+      in: query
+      name: page
+      required: false
+      schema:
+        type: integer
+    Offset:
+      description: How many items to skip when fetching data.
+      in: query
+      name: offset
+      required: false
+      schema:
+        type: integer
+    Sort:
+      description: |
+        How to sort the returned items. `sort` is a CSV of fields used to sort the fetched items. Sorting defaults to ascending (ASC) order but a minus sign (` - `) can be used to reverse this to descending (DESC) order. Fields are prioritized by their order in the CSV. You can also use a ` ? ` to sort randomly.
+      in: query
+      name: sort
+      required: false
+      explode: false
+      schema:
+        type: array
+        items:
+          type: string
+    Meta:
+      description: What metadata to return in the response.
+      in: query
+      name: meta
+      required: false
+      schema:
+        type: string
+    Limit:
+      description: A limit on the number of objects that are returned.
+      in: query
+      name: limit
+      required: false
+      schema:
+        type: integer
+    Filter:
+      description: Select items in collection by given conditions.
+      in: query
+      name: filter
+      required: false
+      schema:
+        type: array
+        items:
+          type: string
+          pattern: ^(\[[^\[\]]*?\]){1}(\[(_eq|_neq|_lt|_lte|_gt|_gte|_in|_nin|_null|_nnull|_contains|_ncontains|_between|_nbetween|_empty|_nempty)\])?=.*?$
+    Fields:
+      description: Control what fields are being returned in the object.
+      in: query
+      name: fields
+      required: false
+      explode: false
+      schema:
+        type: array
+        items:
+          type: string
+    Mode:
+      description: Controls if the API sets a cookie or returns a JWT on successful login.
+      in: query
+      name: mode
+      required: true
+      schema:
+        type: string
+        enum:
+          - jwt
+          - cookie
+  responses:
+    NotFoundError:
+      description: 'Error: Not found.'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int64
+                  message:
+                    type: string
+    UnauthorizedError:
+      description: 'Error: Unauthorized request'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int64
+                  message:
+                    type: string
+  securitySchemes:
+    KeyAuth:
+      type: apiKey
+      in: query
+      name: access_token
+    Auth:
+      type: apiKey
+      in: header
+      name: Authorization

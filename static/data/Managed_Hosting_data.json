@@ -1,0 +1,220 @@
+{
+  "products": [
+    {
+      "id": "1627578550029x952780444523124600",
+      "title": "Lite",
+      "description": "Product's description",
+      "popular": false,
+      "progress_info": [
+        {
+          "label": "1 vCPU Xeon",
+          "value": 10
+        },
+        {
+          "label": "2GB RAM DDR4",
+          "value": 10
+        },
+        {
+          "label": "20GB SSD NVMe",
+          "value": 30
+        },
+        {
+          "label": "60 Visite/min",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "id": "1627579269966x545781427232359800",
+      "title": "Small",
+      "description": "Product's description",
+      "popular": false,
+      "progress_info": [
+        {
+          "label": "2 vCPU Epyc",
+          "value": 20
+        },
+        {
+          "label": "2GB RAM DDR4",
+          "value": 30
+        },
+        {
+          "label": "40GB SSD NVMe",
+          "value": 60
+        },
+        {
+          "label": "120 Visite/min",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "id": "1627582759711x975341490092094500",
+      "title": "Small Plus",
+      "description": "Product's description",
+      "popular": true,
+      "progress_info": [
+        {
+          "label": "2 vCPU Xeon",
+          "value": 20
+        },
+        {
+          "label": "4GB RAM DDR4",
+          "value": 30
+        },
+        {
+          "label": "40GB SSD NVMe",
+          "value": 60
+        },
+        {
+          "label": "240 Visite/min",
+          "value": 35
+        }
+      ]
+    },
+    {
+      "id": "1627649197704x163230372923583330",
+      "title": "Medium",
+      "description": "Product's description",
+      "popular": false,
+      "progress_info": [
+        {
+          "label": "3 vCPU Epyc",
+          "value": 30
+        },
+        {
+          "label": "4GB RAM DDR4",
+          "value": 40
+        },
+        {
+          "label": "80GB SSD NVMe",
+          "value": 60
+        },
+        {
+          "label": "360 Visite/min",
+          "value": 40
+        }
+      ]
+    },
+    {
+      "id": "1627650705871x697601347006322400",
+      "title": "Large",
+      "description": "Product's description",
+      "popular": false,
+      "progress_info": [
+        {
+          "label": "4 vCPU Epyc",
+          "value": 20
+        },
+        {
+          "label": "8GB RAM DDR4",
+          "value": 40
+        },
+        {
+          "label": "160GB SSD NVMe",
+          "value": 60
+        },
+        {
+          "label": "500+ Visite/min",
+          "value": 80
+        }
+      ]
+    },
+    {
+      "id": "1627651912182x651497168404301200",
+      "title": "Large Plus",
+      "description": "Product's description",
+      "popular": false,
+      "progress_info": [
+        {
+          "label": "4 vCPU Xeon",
+          "value": 20
+        },
+        {
+          "label": "16GB RAM DDR4",
+          "value": 40
+        },
+        {
+          "label": "160GB SSD NVMe",
+          "value": 60
+        },
+        {
+          "label": "1000+ Visite/min",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "fdsdfasdfsaf",
+      "title": "Massive",
+      "description": "Product's description",
+      "popular": false,
+      "progress_info": [
+        {
+          "label": "8 vCPU Epyc",
+          "value": 100
+        },
+        {
+          "label": "16GB RAM DDR4",
+          "value": 40
+        },
+        {
+          "label": "240GB SSD NVMe",
+          "value": 100
+        },
+        {
+          "label": "1000+ Visite/min",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "fdsdfasdfsaf",
+      "title": "Massive Plus",
+      "description": "Product's description",
+      "popular": false,
+      "progress_info": [
+        {
+          "label": "8 vCPU Xeon",
+          "value": 100
+        },
+        {
+          "label": "32GB RAM DDR4",
+          "value": 100
+        },
+        {
+          "label": "240GB SSD NVMe",
+          "value": 100
+        },
+        {
+          "label": "1000+ Visite/min",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "fdsdfasdfsaf",
+      "title": "Monte Rosa",
+      "description": "Product's description",
+      "popular": false,
+      "progress_info": [
+        {
+          "label": "8 vCPU Xeon",
+          "value": 100
+        },
+        {
+          "label": "32GB RAM DDR4",
+          "value": 100
+        },
+        {
+          "label": "240GB SSD NVMe",
+          "value": 100
+        },
+        {
+          "label": "1000+ Visite/min",
+          "value": 100
+        }
+      ]
+    }
+  ]
+}

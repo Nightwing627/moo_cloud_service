@@ -1,0 +1,148 @@
+{
+  "products": [
+    {
+      "id": "1634730972779x923821286464851500",
+      "title": "Lite",
+      "description": "Product's description",
+      "popular": false,
+      "progress_info": [
+        {
+          "label": "2 vCore Epyc 2nd Gen",
+          "value": 5
+        },
+        {
+          "label": "8GB RAM DDR4",
+          "value": 4
+        },
+        {
+          "label": "80GB NVMe SSD",
+          "value": 8
+        },
+        {
+          "label": "Risorse Dedicate",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "1634731203738x144667617016339680",
+      "title": "Small",
+      "description": "Product's description",
+      "popular": true,
+      "progress_info": [
+        {
+          "label": "4 vCore Epyc 2nd Gen",
+          "value": 10
+        },
+        {
+          "label": "16GB RAM DDR4",
+          "value": 8
+        },
+        {
+          "label": "160GB NVMe SSD",
+          "value": 16
+        },
+        {
+          "label": "Risorse Dedicate",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "1634731297586x180030080909067600",
+      "title": "Medium",
+      "description": "Product's description",
+      "popular": false,
+      "progress_info": [
+        {
+          "label": "8 vCore Epyc 2nd Gen",
+          "value": 20
+        },
+        {
+          "label": "32GB RAM DDR4",
+          "value": 16
+        },
+        {
+          "label": "240GB NVMe SSD",
+          "value": 25
+        },
+        {
+          "label": "Risorse Dedicate",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "1634731381355x301021856319493760",
+      "title": "Large",
+      "description": "Product's description",
+      "popular": false,
+      "progress_info": [
+        {
+          "label": "16 vCore Epyc 2nd Gen",
+          "value": 40
+        },
+        {
+          "label": "64GB RAM DDR4",
+          "value": 33
+        },
+        {
+          "label": "360GB SSD NVMe",
+          "value": 37
+        },
+        {
+          "label": "Risorse Dedicate",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "1634731754389x178572879002583780",
+      "title": "Large Plus",
+      "description": "Product's description",
+      "popular": false,
+      "progress_info": [
+        {
+          "label": "32 vCore Epyc 2nd Gen",
+          "value": 80
+        },
+        {
+          "label": "128GB RAM DDR4",
+          "value": 66
+        },
+        {
+          "label": "600GB SSD NVMe",
+          "value": 62
+        },
+        {
+          "label": "1000+ Visite/min",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "1634731829000x119216065084510200",
+      "title": "Massive",
+      "description": "Product's description",
+      "popular": false,
+      "progress_info": [
+        {
+          "label": "48 vCore Epyc 2nd Gen",
+          "value": 100
+        },
+        {
+          "label": "192GB RAM DDR4",
+          "value": 40
+        },
+        {
+          "label": "960GB SSD NVMe",
+          "value": 100
+        },
+        {
+          "label": "1000+ Visite/min",
+          "value": 100
+        }
+      ]
+    }
+  ]
+}
